@@ -1,0 +1,31 @@
+<h1>Listing registered_apps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Widget</th>
+      <th>Widget endpoint</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registered_apps.each do |registered_app| %>
+    <tr>
+      <td><%= registered_app.name %></td>
+      <td><%= registered_app.widget %></td>
+      <td><%= registered_app.widget_endpoint %></td>
+      <td><%= link_to 'Show', registered_app %></td>
+      <td><%= link_to 'Edit', edit_registered_app_path(registered_app) %></td>
+      <td><%= link_to 'Destroy', registered_app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Registered app', new_registered_app_path %>

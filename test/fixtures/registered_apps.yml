@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  widget: MyText
+  widget_endpoint: MyString
+
+two:
+  name: MyString
+  widget: MyText
+  widget_endpoint: MyString
