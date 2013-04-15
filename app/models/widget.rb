@@ -9,6 +9,10 @@ class Widget
     @app = app
   end
 
+  def name
+    app.name
+  end
+
   def content
     Liquid::Template.parse(app.widget).render(data)
   end

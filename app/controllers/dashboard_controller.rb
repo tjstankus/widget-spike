@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
 
   def index
-    @widget = Widget.new(RegisteredApp.first)
+    @widgets = RegisteredApp.all.collect { |app| Widget.new(app) }
   end
 
 end

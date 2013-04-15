@@ -1,10 +1,10 @@
 <h1>Portal Dashboard</h1>
 
-<table id="dashboard">
-  <tbody>
-    <tr>
-      <td><%= @widget.content.html_safe %></td>
-      <td>&nbsp;</td>
-    </tr>
-  </tbody>
-</table>
+<div id="dashboard_container">
+  <%- @widgets.each do |widget| -%>
+    <div class="widget">
+      <h2><%= widget.name %></h2>
+      <%= widget.content.html_safe %>
+    </div>
+  <%- end -%>
+</div>
