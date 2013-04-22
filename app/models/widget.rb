@@ -1,5 +1,6 @@
 require 'net/http'
 require 'uri'
+require 'ostruct'
 
 class Widget
 
@@ -14,7 +15,8 @@ class Widget
   end
 
   def content
-    Liquid::Template.parse(app.widget).render(data)
+    objekt = OpenStruct.new(data)
+    ERB.new(app.widget).result(binding)
   end
 
   def data
@@ -22,4 +24,5 @@ class Widget
     json_data = Net::HTTP.get(uri)
     JSON.parse(json_data)
   end
+
 end

@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130412183543) do
+ActiveRecord::Schema.define(version: 20130422180954) do
 
   create_table "registered_apps", force: true do |t|
     t.string   "name"
     t.text     "widget"
     t.string   "widget_endpoint"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "snippets", force: true do |t|
+    t.string   "name"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

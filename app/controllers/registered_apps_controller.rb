@@ -1,5 +1,6 @@
 class RegisteredAppsController < ApplicationController
   before_action :set_registered_app, only: [:show, :edit, :update, :destroy]
+  layout "application"
 
   # GET /registered_apps
   # GET /registered_apps.json
@@ -19,6 +20,7 @@ class RegisteredAppsController < ApplicationController
 
   # GET /registered_apps/1/edit
   def edit
+    @snippets = Snippet.all
   end
 
   # POST /registered_apps

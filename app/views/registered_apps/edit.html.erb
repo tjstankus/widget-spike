@@ -1,4 +1,12 @@
 <h1>Editing registered_app</h1>
+<% @snippets.each do |snippet| %>
+  <div class="snippet">
+	  <%= link_to snippet.name, "javascript:void(0);", class: "snippet-link" %>
+	  <div class="snippet_content" style="border:1px solid red;"><%= raw snippet.content %></div>
+  </div>
+<% end %>
+
+
 
 <%= render 'form' %>
 

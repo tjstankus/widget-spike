@@ -4,7 +4,7 @@
   <%- @widgets.each do |widget| -%>
     <div class="widget">
       <h2><%= widget.name %></h2>
-      <%= widget.content.html_safe %>
+      <%= raw widget.content %>
     </div>
   <%- end -%>
 </div>
